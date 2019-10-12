@@ -2,14 +2,20 @@
 <html>
     <head>
         <title>Elo Rating Calculator</title>
+        <style>
+            .input_text {
+                margin: 5px;
+                padding: 2px;
+            }
+        </style>
     </head>
     <body>
         <h1>Elo Rating Calculator</h1>
         <h2>Service to calculate the change of the ELO rating after a game between 2 players</h2>
         <form>
-            <input type="text" placeholder="First player rating" name="first_rating">
-            <input type="text" placeholder="Second player rating" name="second_rating">
-            <button>Calculate!!</button>
+            <input type="text" placeholder="First player rating" name="first_rating" class="input_text"><br>
+            <input type="text" placeholder="Second player rating" name="second_rating" class="input_text"><br>
+            <button style="margin: 5px;">Calculate!</button>
         </form>
     </body>
 </html>
