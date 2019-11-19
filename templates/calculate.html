@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New ratings</title>
+    </head>
+    <body>
+        <p>Old ratings were:</p>
+        <ul>
+            <li>{{ first_rating }}</li>
+            <li>{{ second_rating }}</li>
+        </ul>
+        <p>k is {{ k }}</p>
+        {% if result==1 %}
+            <p>Result is 1-0</p>
+        {% elif result==0.5 %}
+            <p>Result is 1/2-1/2</p>
+        {% else %}
+            <p>Result is 0-1</p>
+        {% endif %}
+        <p>New ratings are:</p>
+        <ul>
+            <li>{{ new_first_rating }}</li>
+            <li>{{ new_second_rating }}</li>
+        </ul>
+        <a href="{{ url_for('index') }}">Go back</a>
+    </body>
+</html>

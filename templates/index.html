@@ -8,22 +8,22 @@
                 padding: 2px;
             }
         </style>
-        <script src="elo_calculation.js"></script>
+        <!--<script src="elo_calculation.js"></script>-->
     </head>
     <body>
         <h1>Elo Rating Calculator</h1>
         <h2>Service to calculate the change of the ELO rating after a game between 2 players</h2>
-        <form>
-            <input type="text" placeholder="First player rating" id="firstRating" class="inputText"><br>
-            <input type="text" placeholder="Second player rating" id="secondRating" class="inputText"><br>
+        <form action="{{ url_for('calculate') }}", method="POST">
+            <input type="text" placeholder="First player rating" name="firstRating" class="inputText"><br>
+            <input type="text" placeholder="Second player rating" name="secondRating" class="inputText"><br>
             <p>Result</p>
             <input type="radio" name="result" value='1' checked> 1-0<br>
             <input type="radio" name="result" value='0.5'> 1/2-1/2<br>
             <input type="radio" name="result" value='0'> 0-1<br>
             <p>K</p>
-            <input type="text" id="k" class="inputText" value="40"><br>
+            <input type="text" name="k" class="inputText" value="40"><br>
             <br>
-            <button style="margin: 5px;" id="calculateButton">Calculate!</button>
+            <button style="margin: 5px;" name="calculateButton">Calculate!</button>
         </form>
     </body>
 </html>
